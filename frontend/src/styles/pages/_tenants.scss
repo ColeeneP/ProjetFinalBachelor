@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+
+    .background-image {
+        position: fixed;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0.8;
+    }
+}
+
+#main_tenant {
+    h2 {
+        text-align: center;
+        padding-top: 65px;
+    }    
+}
+
+.tenants_section {
+    margin: 50px 10.5% 0 10.5%;
+}
+
+.desktop_tenant {
+    display: none;
+}
