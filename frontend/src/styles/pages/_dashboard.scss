@@ -45,3 +45,21 @@ body {
     }
 
 }
+
+@media (min-width: 800px) {
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        
+        a {
+            display: inline-block;
+            width: 20%;
+            height: 150px;
+        }
+    }
+
+    .payment_section {
+        width: 80%;
+        margin: 0 10%;
+    }
+}

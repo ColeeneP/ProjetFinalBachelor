@@ -63,6 +63,19 @@ a:hover {
   color: #5B2E48;
 }
 
+@media (min-width: 800px) {
+  .adding_button {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    height: 150px;
+  }
+  .adding_button .fa-solid, .adding_button .fa-regular {
+    width: 20%;
+  }
+  .adding_button .text_button {
+    width: 80%;
+  }
+}
 form {
   margin: 100px 10.5% 0 10.5%;
 }
@@ -143,6 +156,24 @@ header .desktop_nav {
   display: none;
 }
 
+@media (min-width: 800px) {
+  header .desktop_nav {
+    display: block;
+  }
+  header .desktop_nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+    margin-right: 20px;
+  }
+  header .mobile_nav {
+    display: none;
+  }
+}
 body {
   height: 100vh;
 }
@@ -184,6 +215,21 @@ body .background-image {
   margin: 10px 0 10px 0;
 }
 
+@media (min-width: 800px) {
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  .actions a {
+    display: inline-block;
+    width: 20%;
+    height: 150px;
+  }
+  .payment_section {
+    width: 80%;
+    margin: 0 10%;
+  }
+}
 #main_property h2 {
   text-align: center;
   padding-top: 65px;
@@ -222,6 +268,18 @@ body .background-image {
   background: rgba(206, 185, 146, 0.6);
 }
 
+@media (min-width: 800px) {
+  .property_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .property_card {
+    justify-content: space-evenly;
+    min-width: 350px;
+    max-width: 500px;
+  }
+}
 body {
   height: 100vh;
 }
@@ -248,6 +306,17 @@ body .background-image {
   display: none;
 }
 
+@media (min-width: 800px) {
+  .mobile_tenant {
+    display: none;
+  }
+  .desktop_tenant {
+    display: block;
+  }
+  .desktop_tenant .adding_button {
+    height: 50px !important;
+  }
+}
 .tenant_info {
   background: rgba(206, 185, 146, 0.2);
   border-radius: 20px;
@@ -313,6 +382,11 @@ body .background-image {
   padding: 0 10px 10px 10px;
 }
 
+@media (min-width: 800px) {
+  .detail_info {
+    padding: 0 30px 0 30px;
+  }
+}
 .main_oneproperty {
   display: flex;
   flex-direction: column;
@@ -344,4 +418,28 @@ body .background-image {
 }
 .main_oneproperty .property_inventory h2 {
   padding: 0;
+}
+
+@media (min-width: 800px) {
+  .main_oneproperty {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main_oneproperty .main_section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  .main_oneproperty .property_img {
+    margin: 10px 10px;
+    width: 45%;
+    height: 100%;
+  }
+  .main_oneproperty .property_info {
+    margin: 10px 10px;
+  }
+  .main_oneproperty .property_inventory {
+    margin: 10px 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */

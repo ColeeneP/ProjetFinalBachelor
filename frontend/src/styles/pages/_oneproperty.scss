@@ -34,3 +34,33 @@
         }
     }    
 }
+
+
+
+@media (min-width: 800px) {
+    .main_oneproperty {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .main_section {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .property_img {
+            margin: 10px 10px;
+            width: 45%;
+            height: 100%;
+        }
+
+        .property_info {
+            margin: 10px 10px;
+        }
+
+        .property_inventory {
+            margin: 10px 10px;
+        }
+    }
+}

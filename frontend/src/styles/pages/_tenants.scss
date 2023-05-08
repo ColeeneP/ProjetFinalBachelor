@@ -25,3 +25,19 @@ body {
 .desktop_tenant {
     display: none;
 }
+
+
+@media (min-width: 800px) {
+    .mobile_tenant {
+        display: none;
+    }
+
+    .desktop_tenant {
+        display: block;
+
+        .adding_button {
+            height: 50px !important;
+        }
+    }
+
+}

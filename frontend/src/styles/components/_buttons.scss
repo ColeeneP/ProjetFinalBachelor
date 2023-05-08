@@ -47,3 +47,19 @@
 .css-ohncnb-MuiSpeedDialIcon-root {
     color: $text_color;
 }
+
+@media (min-width: 800px) {
+    .adding_button {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height: 150px;
+
+        .fa-solid, .fa-regular {
+            width: 20%;
+        }
+
+        .text_button {
+            width: 80%;
+        }
+    }
+}
