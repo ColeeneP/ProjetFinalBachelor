@@ -1,0 +1,21 @@
+body {
+    font-family: $font;
+    color: $text_color;
+    margin: 0;
+}
+
+#root {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: $text_color;
+
+    display: unset;
+
+    &:hover {
+        text-decoration: none;
+        color: $text_color;
+    }
+}

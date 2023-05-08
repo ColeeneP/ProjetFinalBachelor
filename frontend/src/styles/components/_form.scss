@@ -1,0 +1,20 @@
+form {
+    margin: 100px 10.5% 0 10.5%;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 30px 20px 0px 20px;
+}
+
+input, select {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 40%;
+    border-color: $text_color;
+}
+

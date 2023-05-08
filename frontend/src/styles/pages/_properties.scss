@@ -1,0 +1,44 @@
+#main_property {
+    h2 {
+        text-align: center;
+        padding-top: 65px;
+    }  
+}
+
+.property_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 80%;
+    margin: 20px 10.5%;
+    min-height: 180px;
+
+    border-radius: 20px;
+    background: rgba(185, 213, 213, 0.6);
+
+    .card_image {
+        width: 45%;  
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;       
+            border-radius: 20px 0 0 20px;
+        }
+    }
+
+    .card_info {
+        width: 55%;
+        position: relative;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+}
+
+.available {
+    background: rgba(206, 185, 146, 0.6);
+}
