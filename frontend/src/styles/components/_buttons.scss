@@ -1,0 +1,65 @@
+.adding_button {
+    margin: 15px 0;
+    
+    width: 100%;
+    height: 40px;
+    border: 1px solid $main_color;
+    border-radius: 5px;
+    background-color: $main_color;
+    color: $text_color;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .text_button {
+        width: 100%;
+        text-align: justify;
+        text-justify: distribute;
+    }
+}
+
+.submit_button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid $main_color;
+    border-radius: 5px;
+    background-color: $main_color;
+    color: $text_color;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.css-7dv1rb-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab:hover {
+    background-color: $main_color;
+
+    &:hover {
+        background-color: $main_color;
+    }
+}
+
+.css-7dv1rb-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab {
+    background-color: $main_color !important;
+}
+
+.css-ohncnb-MuiSpeedDialIcon-root {
+    color: $text_color;
+}
+
+@media (min-width: 800px) {
+    .adding_button {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height: 150px;
+
+        .fa-solid, .fa-regular {
+            width: 20%;
+        }
+
+        .text_button {
+            width: 80%;
+        }
+    }
+}
