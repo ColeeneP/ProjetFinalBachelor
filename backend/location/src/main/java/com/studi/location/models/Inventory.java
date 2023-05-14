@@ -24,7 +24,7 @@ public class Inventory {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="property", insertable=false, updatable=false)
+    @JoinColumn(name="property", insertable=true, updatable=true)
     private Property property;
 
     @Enumerated(EnumType.STRING)

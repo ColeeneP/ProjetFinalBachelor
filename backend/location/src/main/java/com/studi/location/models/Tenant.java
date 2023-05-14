@@ -19,9 +19,6 @@ public class Tenant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "tenant")
-    private List<Rental> rentals;
-
     private String firstname;
 
     private String lastname;

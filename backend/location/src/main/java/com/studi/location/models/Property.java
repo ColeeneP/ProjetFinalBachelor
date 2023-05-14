@@ -18,11 +18,7 @@ public class Property {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "property")
-    private List<Rental> rentals;
 
-    @OneToMany(mappedBy = "property")
-    private List<Inventory> inventories;
 
     private String address;
 

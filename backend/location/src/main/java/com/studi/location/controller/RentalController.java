@@ -1,6 +1,7 @@
 package com.studi.location.controller;
 
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
+import com.studi.location.models.Payment;
 import com.studi.location.models.Rental;
 import com.studi.location.models.Property;
 import com.studi.location.models.Tenant;
@@ -9,6 +10,7 @@ import com.studi.location.repository.TenantRepository;
 import com.studi.location.service.PropertyService;
 import com.studi.location.service.RentalService;
 import com.studi.location.service.TenantService;
+import org.apache.catalina.mapper.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,13 +30,14 @@ public class RentalController {
     private PropertyService propertyService;
     @Autowired
     private TenantService tenantService;
+    private Mapper mapper;
 
     /**
      * Create - Add a new rental
      * @param rental An object rental
      * @return The rental object saved
      */
-    @PostMapping("/api/rental")
+/*    @PostMapping("/api/rental")
     public ResponseEntity<Rental>createRental(@RequestBody RentalDTO rentalDTO) {
         try {
             //Création d'un nouvel object Rental avec les données du DTO
@@ -44,6 +47,8 @@ public class RentalController {
                 //STEP 2 : tentative de recuperation des tenant et property
                 Property property = this.propertyService.getProperty(rentalDTO.getProperty()).orElse(null);
                 Tenant tenant = this.tenantService.getTenant(rentalDTO.getTenant()).orElse(null);
+
+                //Rental rental = mapper.toRental(rentalDTO);
 
                 // STEP 3 : si , on a une donnée null, on arrête le traitement
                 if(property == null || tenant == null){
@@ -59,6 +64,19 @@ public class RentalController {
             }
         } catch (Exception e) {
             //print stack trace
+            e.printStackTrace();
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }*/
+
+    @PostMapping("/api/rental")
+    public ResponseEntity<Rental>createRental(@RequestBody Rental rental) {
+        System.out.println(rental);
+        try {
+            rentalService.saveRental(rental);
+
+            return new ResponseEntity<>(rental, HttpStatus.CREATED);
+        } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
