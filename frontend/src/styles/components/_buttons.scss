@@ -33,10 +33,10 @@
 }
 
 .css-7dv1rb-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab:hover {
-    background-color: $main_color;
+    background-color: $main_color !important;
 
     &:hover {
-        background-color: $main_color;
+        background-color: $main_color !important;
     }
 }
 
