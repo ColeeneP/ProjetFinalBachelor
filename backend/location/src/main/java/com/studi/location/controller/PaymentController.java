@@ -25,10 +25,12 @@ public class PaymentController {
      */
     @PostMapping("/api/payment")
     public ResponseEntity<Payment>createPayment(@RequestBody Payment payment) {
+        System.out.println(payment);
         try {
-            paymentService.savePayment(new Payment(payment.getRental(), payment.getDate(), payment.getOrigin(), payment.getAmount()));
+            paymentService.savePayment(payment);
             return new ResponseEntity<>(payment, HttpStatus.CREATED);
         } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

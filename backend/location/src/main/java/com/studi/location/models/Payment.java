@@ -20,7 +20,7 @@ public class Payment {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="rental", insertable=false, updatable=false)
+    @JoinColumn(name="rental", insertable=true, updatable=true)
     private Rental rental;
 
     private Date date;

@@ -17,11 +17,11 @@ public class Rental {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="property", insertable=false, updatable=false)
+    @JoinColumn(name="property", insertable=true, updatable=true)
     private Property property;
 
     @ManyToOne
-    @JoinColumn(name="tenant", insertable=false, updatable=false)
+    @JoinColumn(name="tenant", insertable=true, updatable=true)
     private Tenant tenant;
 
     private Boolean deposit;

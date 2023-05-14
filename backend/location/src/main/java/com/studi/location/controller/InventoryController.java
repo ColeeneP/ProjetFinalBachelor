@@ -1,6 +1,7 @@
 package com.studi.location.controller;
 
 import com.studi.location.models.Inventory;
+import com.studi.location.models.Payment;
 import com.studi.location.models.Rental;
 import com.studi.location.models.Tenant;
 import com.studi.location.service.InventoryService;
@@ -26,8 +27,15 @@ public class InventoryController {
      * @return The inventory object saved
      */
     @PostMapping("/api/inventory")
-    public Inventory createInventory(@RequestBody Inventory inventory) {
-        return inventoryService.saveInventory(inventory);
+    public ResponseEntity<Inventory>createInventory(@RequestBody Inventory inventory) {
+        System.out.println(inventory);
+        try {
+            inventoryService.saveInventory(inventory);
+            return new ResponseEntity<>(inventory, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     /**
