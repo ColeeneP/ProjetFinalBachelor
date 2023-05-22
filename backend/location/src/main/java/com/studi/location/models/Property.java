@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Entity
@@ -17,12 +16,6 @@ public class Property {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @OneToMany(mappedBy = "property")
-    private List<Rental> rentals;
-
-    @OneToMany(mappedBy = "property")
-    private List<Inventory> inventories;
 
     private String address;
 
